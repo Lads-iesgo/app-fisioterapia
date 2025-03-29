@@ -2,6 +2,10 @@
 
 Este projeto é um aplicativo React Native desenvolvido com Expo e TypeScript, destinado a [descreva brevemente o propósito do aplicativo, por exemplo: auxiliar pacientes em seus exercícios de fisioterapia, fornecer informações sobre exercícios, etc.].
 
+## Repositório Git
+
+O código-fonte deste projeto está hospedado no GitHub: [https://github.com/Lads-iesgo/app-fisioterapia.git](https://github.com/Lads-iesgo/app-fisioterapia.git)
+
 ## Tecnologias Utilizadas
 
 * **React Native:** Framework para construção de aplicativos móveis multiplataforma.
@@ -9,28 +13,27 @@ Este projeto é um aplicativo React Native desenvolvido com Expo e TypeScript, d
 * **TypeScript:** Superset de JavaScript que adiciona tipagem estática.
 * **Node.js:** Ambiente de tempo de execução JavaScript.
 * **npm (ou Yarn):** Gerenciador de pacotes JavaScript.
+* **Git:** Sistema de controle de versão distribuído.
 
 ## Pré-requisitos
 
-Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).
+* **Node.js:** Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).
+* **Git:** Certifique-se de ter o Git instalado em sua máquina. Você pode baixá-lo em [https://git-scm.com/](https://git-scm.com/).
 
 ## Configuração do Projeto
 
-1.  **Crie a pasta do projeto:**
+1.  **Clone o repositório:**
 
     ```bash
-    mkdir app-fisioterapia
+    git clone [https://github.com/Lads-iesgo/app-fisioterapia.git](https://github.com/Lads-iesgo/app-fisioterapia.git)
     cd app-fisioterapia
     ```
 
-2.  **Crie o projeto Expo com TypeScript:**
+2.  **Instale as dependências:**
 
     ```bash
-    npx create-expo-app . --template expo-template-blank-typescript
+    npm install # ou yarn install
     ```
-
-    * O ponto (`.`) indica que o projeto será criado dentro da pasta atual.
-    * `--template expo-template-blank-typescript` configura o projeto para usar TypeScript.
 
 3.  **Inicie o servidor Expo:**
 
@@ -40,25 +43,11 @@ Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo e
 
     Este comando inicia o servidor de desenvolvimento Expo, permitindo que você visualize o aplicativo em um emulador, simulador ou dispositivo físico.
 
-## Executando o Aplicativo
-
-Para executar o aplicativo novamente, siga estes passos:
-
-1.  Navegue até o diretório do projeto:
-
-    ```bash
-    cd app-fisioterapia
-    ```
-
-2.  Inicie o servidor Expo:
-
-    ```bash
-    npx expo start
-    ```
+## Estrutura do Projeto
 
 ## Estrutura do Projeto
 
-📦 MeuProjeto
+📦 app-fisioterapia
  ┣ 📂 assets/            # Imagens e outros arquivos estáticos
  ┣ 📂 src/               # Código-fonte principal
  ┃ ┣ 📂 components/      # Componentes reutilizáveis
@@ -72,3 +61,44 @@ Para executar o aplicativo novamente, siga estes passos:
  ┗ 📜 README.md          # Documentação do projeto
 
 
+
+
+## Branches
+
+* **main:** Branch principal para versões estáveis.
+* **develop:** Branch para desenvolvimento em andamento.
+
+## Contribuindo
+
+Para contribuir com o projeto, siga estes passos:
+
+1.  **Crie uma nova branch a partir da `develop`:**
+
+    ```bash
+    git checkout develop
+    git checkout -b sua-nova-branch
+    ```
+
+2.  **Faça suas alterações e commits:**
+
+    ```bash
+    git add .
+    git commit -m "Descrição das suas alterações"
+    ```
+
+3.  **Envie suas alterações para o GitHub:**
+
+    ```bash
+    git push origin sua-nova-branch
+    ```
+
+4.  **Crie um Pull Request (PR) para a branch `develop`.**
+
+## Próximos Passos
+
+* [Liste as próximas funcionalidades ou melhorias que você planeja implementar no aplicativo.]
+* [Adicione informações sobre testes, documentação adicional, etc.]
+
+## Contato
+
+[Adicione informações de contato, como e-mail ou links para perfis de redes sociais.]
