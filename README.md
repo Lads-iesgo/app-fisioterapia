@@ -96,9 +96,8 @@ Para contribuir com o projeto, siga estes passos:
 
 ## Próximos Passos
 
-* [Liste as próximas funcionalidades ou melhorias que você planeja implementar no aplicativo.]
-* [Adicione informações sobre testes, documentação adicional, etc.]
+**
 
 ## Contato
 
-[Adicione informações de contato, como e-mail ou links para perfis de redes sociais.]
+**
