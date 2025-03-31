@@ -6,10 +6,10 @@ interface MyButtonProps {
   cor: string;
 }
 
-const MyButton: React.FC<MyButtonProps> = ({ texto, cor }) => {
+const MyButton= ( props: MyButtonProps) => {
   return (
-    <TouchableOpacity style={[styles.button, {backgroundColor: cor || 'blue'}]}>
-      <Text style={styles.text}>{texto}</Text>
+    <TouchableOpacity style={[styles.button, {backgroundColor: props.cor || 'blue'}]}>
+      <Text style={styles.text}>{props.texto}</Text>
     </TouchableOpacity>
   );
 };
