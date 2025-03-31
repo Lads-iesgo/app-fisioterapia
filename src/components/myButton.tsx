@@ -3,12 +3,12 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
 interface MyButtonProps {
   texto: string;
-  cor: string;
+  cor?: string;
 }
 
 const MyButton= ( props: MyButtonProps) => {
   return (
-    <TouchableOpacity style={[styles.button, {backgroundColor: props.cor || 'blue'}]}>
+    <TouchableOpacity activeOpacity={0.6} style={[styles.button, {backgroundColor: props.cor || '#00005d'}]}>
       <Text style={styles.text}>{props.texto}</Text>
     </TouchableOpacity>
   );
