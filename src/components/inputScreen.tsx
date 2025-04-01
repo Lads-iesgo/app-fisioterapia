@@ -8,7 +8,12 @@ interface InputProps {
 const InputScreen = (props: InputProps) => {
   return (
     <View style={[styles.container, styles.shadow]}>
-      <TextInput style={styles.input} placeholder={props.pHolder} />
+      <TextInput
+        style={styles.input}
+        placeholder={props.pHolder}
+        inputMode="email"
+        autoComplete="email"
+      />
     </View>
   );
 };
@@ -26,6 +31,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: "rgba(0,0,0,0.2)",
+    paddingLeft: 15,
   },
   shadow: {
     shadowColor: "#000",
