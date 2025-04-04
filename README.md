@@ -1,151 +1,89 @@
-# App de Fisioterapia
+<!-- Title -->
+<h1 align="center">
+  Create React Native App
+</h1>
 
-Este projeto é um aplicativo React Native desenvolvido com Expo e TypeScript, destinado a auxiliar o curso de fisioterapia com seus pacientes.
+<!-- Header -->
 
-## Repositório Git
+<p align="center">
+  <b>Create React Native apps with no build configuration.</b>
+  <br />
 
-O código-fonte deste projeto está hospedado no GitHub: [https://github.com/Lads-iesgo/app-fisioterapia.git](https://github.com/Lads-iesgo/app-fisioterapia.git)
+  <p align="center">
+    <!-- iOS -->
+    <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
+    <!-- Android -->
+    <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
+    <!-- Web -->
+    <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
+  </p>
+</p>
 
-## Tecnologias Utilizadas
+<!-- Body -->
 
-* **React Native:** Framework para construção de aplicativos móveis multiplataforma.
-* **Expo:** Plataforma para desenvolvimento universal de aplicativos React Native.
-* **TypeScript:** Superset de JavaScript que adiciona tipagem estática.
-* **Node.js:** Ambiente de tempo de execução JavaScript.
-* **npm (ou Yarn):** Gerenciador de pacotes JavaScript.
-* **Git:** Sistema de controle de versão distribuído.
-
-## Pré-requisitos
-
-* **Node.js:** Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).
-* **Git:** Certifique-se de ter o Git instalado em sua máquina. Você pode baixá-lo em [https://git-scm.com/](https://git-scm.com/).
-
-## Configuração do Projeto
-
-1.  **Clone o repositório:**
-
-    ```bash
-    git clone https://github.com/Lads-iesgo/app-fisioterapia.git
-    cd app-fisioterapia
-    ```
-
-2.  **Instale as dependências:**
-
-    ```bash
-    npm install # ou yarn install
-    ```
-
-3.  **Inicie o servidor Expo:**
-
-    ```bash
-    npx expo start
-    ```
-
-    Este comando inicia o servidor de desenvolvimento Expo, permitindo que você visualize o aplicativo em um emulador, simulador ou dispositivo físico.
-
-
-## Estrutura do Projeto
-
-```
-📦 app-fisioterapia
- ┣ 📂 assets/            ## Imagens e outros arquivos estáticos
- ┣ 📂 src/               # Código-fonte principal
- ┃ ┣ 📂 components/      # Componentes reutilizáveis
- ┃ ┣ 📂 screens/         # Telas do aplicativo
- ┃ ┣ 📂 services/        # Requisições para APIs
- ┃ ┗ 📂 styles/          # Estilos globais
- ┃ ┗ 📂 utils/           # Funções auxiliares
- ┣ 📜 App.tsx            # Arquivo principal do aplicativo
- ┣ 📜 package.json       # Dependências do projeto
- ┣ 📜 tsconfig.json      # Configuração do TypeScript
- ┗ 📜 README.md          # Documentação do projeto
-
+```sh
+npx create-react-native-app
 ```
 
+Once you're up and running with Create React Native App, visit [this tutorial](https://reactnative.dev/docs/tutorial.html) for more information on building apps with React Native.
 
-## Branches
+## Features
 
-* **main:** Branch principal para versões estáveis.
-* **develop:** Branch para desenvolvimento em andamento.
+- Native project ready to be built on to your device.
+- Support for unimodules and auto-linking.
+- OTA updates, and Gestures out of the box.
+- Full support for React Native web.
+- TypeScript by default.
+- Works with the Expo Client app.
 
-## Contribuindo
+## Usage
 
-Para contribuir com o projeto, siga estes passos:
+- `npx create-react-native-app` Create a new React Native app.
+- `yarn ios` -- (`react-native run-ios`) Build the iOS App (requires a MacOS computer).
+- `yarn android` -- (`react-native run-android`) Build the Android App.
+- `yarn web` -- (`expo start:web`) Run the website in your browser.
 
-1.  **Crie uma nova branch a partir da `develop`:**
+## Sections
 
-    ```bash
-    git checkout develop
-    git checkout -b sua-nova-branch
-    ```
+- [Usage with Expo Client App](#usage-with-expo-client-app)
+- [Support and Contact](#support-and-contact)
+- [FAQs](#faqs)
+- [Contributing](#contributing)
 
-    ou
+## Usage with Expo Client App
 
-    ```bash
-    git checkout -b sua-nova-branch/ develop
-    ```
+Expo Client enables you to work with all of the [Components and APIs](https://facebook.github.io/react-native/docs/getting-started.html) in React Native, as well as the [JavaScript APIs](https://docs.expo.io/versions/latest/sdk/index.html) that the are bundled with the Expo App.
 
+Expo Client supports running any project that doesn't have custom native modules added.
 
-2.  **Faça suas alterações e commits:**
+- Download the "Expo Client" app from the Play Store or App Store.
+- Start your project with Expo
+  - Install the CLI `npm i -g expo-cli`
+  - Start the project `expo start`
+- Open the project:
+  - Sign in to expo and the project will appear in the app.
+  - Or point your phone's camera at the QR code in the terminal (press "c" to view it).
 
-    ```bash
-    git add .
-    git commit -m "Descrição das suas alterações"
-    ```
+## Support and Contact
 
-3.  **Envie suas alterações para o GitHub:**
+If you're having issues with Create React Native App, please make sure:
 
-    ```bash
-    git push origin sua-nova-branch
-    ```
+- The issue is not covered in the [Expo Docs](https://docs.expo.io/versions/latest/)
+- There is not already an [open issue](https://github.com/expo/expo-cli/issues) for your particular problem
 
-4.  **Crie um Pull Request (PR) para a branch `develop`.**
+If you've checked the documentation and currently open issues, please either [open a new GitHub issue](https://github.com/expo/create-react-native-app/issues/new) or ask a question on [Expo forums](https://forums.expo.io/c/help).
 
-## Próximos Passos
-## Criando um Pull Request (PR) para a branch `develop`
+## Contributing
 
-Um Pull Request (PR) é uma solicitação para mesclar suas alterações da sua branch para a branch `develop`. Isso permite que outros colaboradores revisem seu código e garantam que ele se encaixe no projeto. Siga estes passos para criar um PR:
+Please see [Contributing guide](https://github.com/expo/expo-cli/blob/master/CONTRIBUTING.md) in the Expo CLI monorepo for instructions on contributing to Expo CLI.
 
-1.  **Verifique suas alterações:**
+<!-- Footer -->
 
-    * Certifique-se de que suas alterações estejam completas e funcionando corretamente.
-    * Use `git status` para verificar as alterações pendentes e `git diff` para revisar as modificações.
+---
 
-2.  **Envie sua branch para o GitHub:**
-
-    * Se você ainda não enviou sua branch para o repositório remoto, use o comando:
-
-        ```bash
-        git push origin sua-nova-branch
-        ```
-
-        * Substitua `sua-nova-branch` pelo nome da sua branch.
-
-3.  **Crie o Pull Request no GitHub:**
-
-    * Acesse o repositório do projeto no GitHub.
-    * Clique na aba "Pull requests".
-    * Clique no botão "New pull request".
-    * Selecione sua branch como a branch de origem e `develop` como a branch de destino.
-    * Adicione um título descritivo e uma descrição detalhada para o PR.
-    * Clique no botão "Create pull request".
-
-4.  **Acompanhe a revisão:**
-
-    * Aguarde a revisão do seu PR por outros colaboradores.
-    * Responda aos comentários e faça as alterações necessárias.
-    * Após a aprovação, o PR poderá ser mesclado na branch `develop`.
-
-## Dicas adicionais
-
-* Escreva mensagens de commit claras e concisas.
-* Mantenha o PR o menor e mais focado possível.
-* Comunique-se de forma eficaz com os revisores.
-
-
-
-
-
-## Contato
-
-*   [lads@iesgo.edu.br](lads@iesgo.edu.br)
+<p>
+    <a aria-label="sponsored by expo" href="http://expo.io">
+        <img src="https://img.shields.io/badge/Sponsored_by-Expo-4630EB.svg?style=for-the-badge&logo=EXPO&labelColor=000&logoColor=fff" target="_blank" />
+    </a>
+    
+</p>

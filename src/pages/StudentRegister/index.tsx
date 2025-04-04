@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-import BackPageNav from "../components/backPageNav";
-import InputScreen from "../components/inputScreen";
-import MyButton from "../components/myButton";
+import BackPageNav from "../../components/backPageNav";
+import InputScreen from "../../components/inputScreen";
+import MyButton from "../../components/myButton";
+import { StaticParamList, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { Stack } from "@/src/routes/stack.routes";
+
+type StackScreensParamList = StaticParamList<typeof Stack>;
+type ProfileScreenNavigationProp = NativeStackNavigationProp<
+  StackScreensParamList,
+  "CardPaciente"
+>;
 
 export default function StudentRegister() {
+  let navigation = useNavigation<ProfileScreenNavigationProp>();
+
+  useEffect(() => {
+    navigation.setOptions({
+      animation: "slide_from_right",
+    });
+  }, [navigation]);
+
   return (
     <>
-      <BackPageNav />
+      <BackPageNav
+        onPress={() => navigation.goBack()}
+        title="Registrar Estudantes"
+      />
       <View style={styles.container}>
         <Image
-          source={require("../../assets/images/Logo-IESGO.png")}
+          source={require("../../../assets/images/Logo-IESGO.png")}
           style={styles.img}
         />
         <View style={[styles.boxRegister, styles.shadow]}>
@@ -18,10 +38,10 @@ export default function StudentRegister() {
             <Text style={styles.title}>Insira os dados do estudante</Text>
             <InputScreen pHolder="Nome completo" />
             <InputScreen pHolder="Número da matrícula" />
-            <InputScreen pHolder="Semestre" />
-            <InputScreen pHolder="E-mail do estudante" />
-            <InputScreen pHolder="Senha" />
-            <InputScreen pHolder="Confirmar senha" />
+            <InputScreen pHolder="Semestre" emailOrNumber={false} />
+            <InputScreen pHolder="E-mail do estudante" emailOrNumber={true} />
+            <InputScreen pHolder="Senha" password={true} />
+            <InputScreen pHolder="Confirmar senha" password={true} />
           </View>
         </View>
         <View style={styles.btn}>

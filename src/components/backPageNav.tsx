@@ -1,51 +1,59 @@
-import React, { useState } from "react";
-import { Image, StyleSheet, TouchableOpacity, Animated } from "react-native";
+import React from "react";
+import { Image, StyleSheet, TouchableOpacity, View, Text } from "react-native";
 
-export default function BackPageNav() {
-  const [position, setPosition] = useState(new Animated.Value(0));
-  const [opacity, setOpacity] = useState(new Animated.Value(0));
+interface BackPageNavProps {
+  onPress: () => void;
+  title?: string;
+}
 
-  Animated.sequence([
-    Animated.timing(position, {
-      toValue: 55,
-      duration: 900,
-      useNativeDriver: false,
-    }),
-    Animated.timing(opacity, {
-      toValue: 100,
-      duration: 900,
-      useNativeDriver: false,
-    }),
-  ]).start();
-
+export default function BackPageNav(props: BackPageNavProps) {
   return (
-    <Animated.View style={[styles.container, { height: position }]}>
+    <View style={styles.container}>
       <TouchableOpacity
         activeOpacity={0.6}
-        style={[styles.imgBox, { opacity: opacity }]}
+        style={styles.imgBox}
+        onPress={props.onPress}
       >
         <Image
           source={require("../../assets/images/icons8-back-96.png")}
           style={styles.img}
         />
       </TouchableOpacity>
-    </Animated.View>
+      <View style={styles.titleBox}>
+        <Text style={styles.title}>{props.title}</Text>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     width: "100%",
+    height: "8%",
     backgroundColor: "#00005D",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
   },
   imgBox: {
-    marginLeft: 20,
     justifyContent: "center",
-    flex: 1,
   },
   img: {
     resizeMode: "contain",
     width: 40,
     height: 40,
+  },
+  titleBox: {
+    justifyContent: "center",
+    alignItems: "center",
+    paddingRight: 30,
+    flex: 1,
+  },
+  title: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: 400,
+    textAlign: "center",
   },
 });

@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 
 interface InputProps {
   pHolder: string;
+  password?: boolean;
+  emailOrNumber?: boolean;
 }
 
 const InputScreen = (props: InputProps) => {
+  const [isHighlighted, setIsHighlighted] = useState(false);
+
   return (
     <View style={[styles.container, styles.shadow]}>
       <TextInput
         style={styles.input}
         placeholder={props.pHolder}
-        inputMode="email"
+        inputMode={props.emailOrNumber ? "email" : "numeric"}
         autoComplete="email"
+        secureTextEntry={props.password}
+        onFocus={(isHighlighted) => setIsHighlighted(true)}
+        onBlur={(isHighlighted) => setIsHighlighted(false)}
       />
     </View>
   );

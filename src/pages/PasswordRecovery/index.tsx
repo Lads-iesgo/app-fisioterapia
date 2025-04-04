@@ -1,21 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import InputScreen from "../components/inputScreen";
-import MyButton from "../components/myButton";
-import BackPageNav from "../components/backPageNav";
+import { StaticParamList, useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+import { Stack } from "@/src/routes/stack.routes";
+
+import BackPageNav from "../../components/backPageNav";
+import InputScreen from "../../components/inputScreen";
+import MyButton from "../../components/myButton";
+
+type StackScreensParamList = StaticParamList<typeof Stack>;
+type ProfileScreenNavigationProp = NativeStackNavigationProp<
+  StackScreensParamList,
+  "PasswordRecovery"
+>;
 
 export default function PasswordRecovery() {
+  let navigation = useNavigation<ProfileScreenNavigationProp>();
+
+  useEffect(() => {
+    navigation.setOptions({
+      animation: "default",
+    });
+  }, [navigation]);
+
   return (
     <>
-      <BackPageNav />
+      <BackPageNav
+        onPress={() => navigation.goBack()}
+        title="Recuperação de Senha"
+      />
       <View style={styles.container}>
         <Image
-          source={require("../../assets/images/Logo-IESGO.png")}
+          source={require("../../../assets/images/Logo-IESGO.png")}
           style={styles.img}
         />
         <Text style={styles.title}>Insira o e-mail cadastrado</Text>
         <View style={styles.login}>
-          <InputScreen pHolder="E-mail" />
+          <InputScreen pHolder="E-mail" emailOrNumber={true} />
           <MyButton texto="Enviar código" />
         </View>
         <View style={{ alignItems: "center" }}>
